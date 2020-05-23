@@ -1,4 +1,4 @@
 code.Education Desafio imagem Laravel
 
-dockerhub:
-
+Imagem do App com Laravel no dockerhub:
+https://hub.docker.com/repository/docker/aleckzts/laravel-app
