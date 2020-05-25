@@ -17,8 +17,12 @@ services:
   nginx:
     build: .docker-laravel/nginx
     container_name: nginx
+    entrypoint: dockerize -template /etc/nginx/original.nginx.conf:/etc/nginx/conf.d/nginx.conf nginx -g 'daemon off;'
     restart: always
     tty: true
+    environment: 
+      - PHPFPM_HOST=app
+      - PHPFPM_PORT=9000
     ports: 
       - "8000:80"
     volumes:
