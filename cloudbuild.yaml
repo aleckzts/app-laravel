@@ -6,3 +6,7 @@ steps:
   - id: "Rodando docker ps"
     name: "gcr.io/cloud-builders/docker"
     args: ['ps']
+
+  - id: "Rodando Laravel composer"
+    name: "gcr.io/cloud-builders/docker"
+    args: ['exec','-t','app','copmoser','install']
